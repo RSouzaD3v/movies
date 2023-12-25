@@ -14,10 +14,11 @@ export const Movie = () => {
 
 
     const getMovie = () => {
-        fetch(`https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${page}`)
+        fetch(`https://api.themoviedb.org/3/discover/movie?api_key=0f95c6bf6b10b61b3da480119f5f689e`)
         .then(res => res.json())
         .then(json => setMovies(json.results))
     }
+    console.log(movies)
 
     const showDescri = () => {
         if(descri === 'none'){
